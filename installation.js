@@ -223,9 +223,6 @@ Instalation.prototype.deleteObjects = function(){
         
     this.canvas.renderAll();
 }
-/*Instalation.prototype.insertInfoInCanvas = function(coords, isMouseDown){
-    $('#'+canvasId).attr({'data-mousedown' : isMouseDown, 'data-mousedown-coords' : (!coords?'':coords.x+','+coords.y)}); 
-}*/
 Instalation.prototype.parseCoords = function(type){
      switch(type){
         case 'move':
@@ -330,7 +327,6 @@ Instalation.prototype.writeMouseEvents = function(){
             var points = canvas.getPointer(options.e);
             instalation.monitorParameters('move', points);
             $('#'+canvasId).attr({'data-move-coords' : points.x+','+points.y});
-            //var absolute = canvas.getAbsoluteCoords(points);
         }
     })
     
@@ -341,10 +337,8 @@ Instalation.prototype.writeMouseEvents = function(){
 }
 // TEST METHODS
 Instalation.prototype.getStack = function(){
-    //alert(JSON.stringify(this.canvas));
     this.canvas.forEachObject(function(o){
         if(o.type == 'path'){
-            //o.set({left : 245, top : 77});
             o.pathOffset;
         }
     });
