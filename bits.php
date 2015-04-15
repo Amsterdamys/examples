@@ -19,7 +19,7 @@ function printResult(){
 	return false;
 }
 function getIndexes($numbers, $sum) {
-	$cnt 		  = count($numbers);
+	$cnt 	      = count($numbers);
 	$combinations = pow(2,$cnt)-1;
 	for ($i=1; $i <= $combinations; $i++) {
 		$bits 	  	  = decbin($i);
